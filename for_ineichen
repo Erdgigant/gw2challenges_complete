@@ -1,0 +1,12 @@
+Ich habe bereits einen User mit gültigem ApiKey erstellt: 
+roman.schilter10@gmail.com + asdf
+
+Leider konnte ich die aktivierung der Registration nicht per Email machen, darum muss man die über die command-line machen:
+   ./flow sandstormuser:activateregistration 
+
+Wenn sie die minis von der Api neu laden wollen, können sie folgendes verwenden:
+   ./flow gw2api:loadminis
+
+Wenn sie auf my minis klicken und no minis found kommt, bitte auf reload my minis klicken. Es werden dann über die Api die minis gespeichert, welche ich im Spiel besitzte. 
+
+Die Rechtecke mit Gestricheltem Rand kann man bearbeiten, löschen und neue erstellen. Diese änderungen sind allerdings nicht persistent, ausser beim erstellen einer Challenge. Da werden alle gespeichert, welche im oberen Kasten sind egal wie sie dahin gekommen sind (drag, erstellt oder verändert). 
