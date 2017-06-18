@@ -1,0 +1,43 @@
+{namespace um=Sandstorm\UserManagement\ViewHelpers}
+
+<html>
+    <head>
+    	<f:base />    
+        <meta charset="utf-8">
+        <title>GW2Challenges</title>        
+        <script src="https://unpkg.com/jquery" ></script>
+        <script src="https://unpkg.com/vue" ></script>
+		<link href="https://raw.githubusercontent.com/evankarageorgos/hue/master/hue.css" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+		<link href="_Resources/Static/Packages/Default/css/stylesheet.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body class="tranquility">
+    	<div>
+    		<f:link.action class="pure-button" action="index" controller="Mini">Index</f:link.action>
+    		<f:link.action class="pure-button" action="all" controller="Mini">All Minis</f:link.action>
+    		<f:link.action class="pure-button" action="my" controller="Mini">My Minis</f:link.action>
+    		<f:link.action class="pure-button" action="reload" controller="Mini">Reload my Minis</f:link.action>
+    		<f:link.action class="pure-button" action="api" controller="User">Api Key</f:link.action>
+    		<f:link.action class="pure-button" action="list" controller="Challenge">Challenges</f:link.action>
+    		<f:link.action class="pure-button" action="new" controller="Challenge">New Challenges</f:link.action>
+    	</div>
+    	
+    	<div>
+    		<um:ifAuthenticated>
+			  <f:then>
+			    <f:link.action class="pure-button" action="logout" controller="Login" package="Sandstorm.UserManagement">Logout</f:link.action>
+			  </f:then>
+			  <f:else>
+			    <f:link.action class="pure-button" action="login" controller="Login" package="Sandstorm.UserManagement">Login</f:link.action>
+			  </f:else>
+			</um:ifAuthenticated>
+    	</div>
+    
+        <f:flashMessages class="flashmessages" />
+
+        <f:render section="Content" />
+    </body>
+    <footer>
+    	<script src="_Resources/Static/Packages/Default/Javascript/script.js" type="text/javascript"></script>
+    </footer>
+</html>

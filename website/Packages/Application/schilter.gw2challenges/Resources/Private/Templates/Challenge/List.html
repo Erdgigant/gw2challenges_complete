@@ -1,0 +1,15 @@
+<f:layout name="Default" />
+
+<f:section name="Content">
+    <div id="wrapper">
+        <f:for each="{challenges}" as="challenge">
+        	<div>
+        		<p>{challenge.id} - {challenge.name}<p>
+        		
+        		<f:for each="{challenge.minis}" as="mini">
+        			<p>{mini.id} - {mini.name} - {mini.reached}</p>
+        		</f:for>
+        	</div>        	
+        </f:for>
+    </div>
+</f:section>

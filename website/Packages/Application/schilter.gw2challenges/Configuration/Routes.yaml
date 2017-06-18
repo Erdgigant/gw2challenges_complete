@@ -1,0 +1,32 @@
+-
+  name: 'Index'
+  uriPattern: ''
+  defaults:
+    '@package':    'schilter.gw2challenges'
+    '@controller': 'Mini'
+    '@action':     'index'
+    '@format':     'html'
+    
+-
+  name: 'MiniController'
+  uriPattern: 'mini/{@action}'
+  defaults:
+    '@package':    'schilter.gw2challenges'
+    '@controller': 'Mini'
+    '@format':     'html'
+    
+-
+  name: 'UserController'
+  uriPattern: 'user/{@action}'
+  defaults:
+    '@package':    'schilter.gw2challenges'
+    '@controller': 'User'
+    '@format':     'html'
+ 
+-
+  name: 'ChallengeController'
+  uriPattern: 'challenge/{@action}'
+  defaults:
+    '@package':    'schilter.gw2challenges'
+    '@controller': 'Challenge'
+    '@format':     'html'
